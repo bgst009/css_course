@@ -1,0 +1,50 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap'); */
+
+/* 
+Typography is the way that text is arranged and presented
+*/
+
+
+body {
+    padding: 10%;
+    font-size: 2rem;
+    font-family: "Roboto", sans-serif;
+    /* font-family: 'Times New Roman', Times, serif; */
+    /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+    /* font-family: Arial, Helvetica, sans-serif; */
+    /* font-family: 'Courier New', Courier, monospace; */
+    /* font-family: fantasy; */
+    /* font-family: monospace; */
+    /* font-family: sans-serif; */
+}
+
+/* input,
+button {
+    font: inherit;
+} */
+
+
+
+
+p {
+    /* text-decoration: none; */
+    /* text-transform: uppercase; */
+    /* text-align: right; */
+    /* text-indent: 2em; */
+
+    line-height: 1.5;
+    /* letter-spacing: 0.1em; */
+
+    /* word-spacing: 0.2em; */
+
+    /* font-weight: bolder; */
+    /* font-style: oblique; */
+    /* font-style: italic; */
+}
+
+
+/* .roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+} */
