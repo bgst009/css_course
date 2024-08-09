@@ -17,6 +17,7 @@ body {
   width: 75vw;
   height: 85vh;
   margin: 40px auto;
+  position: relative;
 }
 
 .inner-container {
@@ -24,6 +25,7 @@ body {
   width: 40vw;
   height: 50vh;
   margin: 200px auto;
+  /* position: relative; */
 }
 
 .box {
@@ -31,4 +33,91 @@ body {
   height: 150px;
   color: #fff;
   padding: 1rem;
+}
+
+.absolute {
+  background-color: blue;
+  position: absolute;
+  top: 0;
+  /* How to make things disappear */
+  /* left: -100000px; */
+  left: 0;
+  /* How to use z-index */
+  z-index: 1;
+}
+
+.relative {
+  background-color: red;
+  position: relative;
+  top: 300px;
+  left: 200px;
+}
+
+.fixed {
+  background-color: green;
+  position: fixed;
+  top: 200px;
+}
+
+.sticky {
+  background-color: black;
+  position: sticky;
+  /* z-index: 2; */
+  top: 0;
+}
+
+/*  Remember, how to make things disappear! */
+
+/*//////////////////////////*/
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  height: 100vh;
+}
+
+header,
+footer {
+  color: white;
+  text-align: center;
+  height: 10%;
+}
+
+.social {
+  position: fixed;
+  top: 30%;
+  font-size: inherit;
+  background-color: aqua;
+  padding: 1rem;
+}
+
+header {
+  font-size: 5rem;
+  position: sticky;
+  top: 0;
+}
+
+.red {
+  background-color: red;
+}
+
+.green {
+  background-color: green;
+}
+
+.blue {
+  background-color: blue;
+}
+
+footer {
+  position: sticky;
+  bottom: 0;
+  background-color: #000;
+  font-size: 3rem;
+}
+
+a:visited {
+  color: #fff;
 }
