@@ -11,7 +11,10 @@ body {
   min-height: 100vh;
 }
 
+.example {
+  border: 1px solid red;
+}
 
-
-
-
+img {
+  display: block;
+}
