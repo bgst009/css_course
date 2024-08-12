@@ -38,6 +38,8 @@ footer {
   background-color: #1e293b;
   color: whitesmoke;
   text-align: center;
+
+  z-index: 1;
 }
 
 header {
@@ -106,6 +108,47 @@ footer {
   text-align: center;
 }
 
+.card:nth-child(even) {
+  background-color: peachpuff;
+}
+
+.card figcaption::after {
+  content: '✨';
+  display: block;
+}
+
+.card figcaption::first-letter {
+  font-size: 3rem;
+}
+
+.card p {
+  position: relative;
+}
+
+.card p::before {
+  content: open-quote;
+  font-size: 3em;
+  position: absolute;
+  top: -0.25em;
+  left: -0.5em;
+}
+
+.card p::after {
+  content: close-quote;
+  font-size: 3em;
+  position: absolute;
+  top: -0.25em;
+  right: -0.5em;
+}
+
+.card img:not([alt]) {
+  border: 10px solid red;
+}
+
+.card:target {
+  border: 2px solid rebeccapurple;
+}
+
 /* || SMALL */
 @media screen and (min-width: 576px) {
   main {
@@ -113,9 +156,11 @@ footer {
     flex-flow: row wrap;
     padding: 1rem;
   }
+
   .card {
     width: min(100%, 400px);
   }
+
   .card:last-child {
     order: -1;
   }
@@ -126,12 +171,15 @@ footer {
   nav {
     display: none;
   }
+
   .card {
     width: min(100%, 325px);
   }
+
   .card figure {
     flex-flow: column-reverse;
   }
+
   .card p {
     margin-top: 1rem;
   }
@@ -142,6 +190,7 @@ footer {
   .card {
     width: min(100%, 400px);
   }
+
   .card:nth-child(2) {
     order: -1;
   }
