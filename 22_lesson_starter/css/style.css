@@ -33,3 +33,104 @@ div {
   display: grid;
   place-content: center;
 }
+
+div:first-child {
+  background-color: dodgerblue;
+  /* 在X轴向左移动50% */
+  /* transform: translateX(-50%); */
+
+  /* X 旋转180度 */
+  /* transform: rotateX(180deg); */
+
+  /* X 轴缩放 120% */
+  /* transform: scaleX(120%); */
+
+  /* X 轴倾斜 -10度 */
+  /* transform: skewX(-10deg); */
+}
+
+div:nth-child(even) {
+  background-color: yellow;
+  /* 在Y轴向上移动2rem */
+  /* transform: translateY(-2rem); */
+
+  /* Y 旋转180度 */
+  /* transform: rotateY(180deg); */
+
+  /* Y 轴缩放 120% */
+  /* transform: scaleY(120%); */
+
+  /* Y 轴倾斜 10度 */
+  /* transform: skewY(10deg); */
+}
+
+div:last-child {
+  background-color: limegreen;
+  /* 在X轴向右移动100%，Y轴向上移动2rem */
+  /* transform: translate(100%, -2rem); */
+
+  /* Z 旋转45度 rotateZ(45deg) 和 rotate(45deg) 的效果是一样的*/
+  /* transform: rotateZ(45deg); */
+  /* transform: rotate(45deg); */
+
+  /* X 轴缩放 50%, Y 轴缩放 50% */
+  /* transform: scale(50%, 50%); */
+
+  /* X 轴倾斜 10度, Y 轴倾斜 10度 */
+  /* transform: skew(10deg, 10deg); */
+}
+
+div:hover {
+  background-color: midnightblue;
+
+  /* transition-property: background-color, transform;
+  transition-duration: 2s, 1s;
+  transition-delay: 0.5; 
+  transition-timing-function: linear; */
+  /* transition-timing-function: ease-in-out;  */
+  /* 以上注释可以简写为  ease 或者 linear 一般默认 */
+  transition: all 2s ease-in-out 0.5s;
+
+}
+
+div:hover:last-child {
+  transform: rotate(180deg)
+}
+
+.animate {
+  /* 命名 animate */
+  /* animation-name: slide;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 1s;
+  animation-iteration-count: 2;
+  animation-direction: normal; */
+  /* 保持最后一帧的状态 例如 最后一帧的背景颜色 */
+  /* animation-fill-mode: forwards; */
+
+  /* 以上内容可以简写为 */
+  /* /* @keyframes duration | easing-function | delay | iteration-count | direction | fill-mode | play-state | name */
+  animation: 5s ease-in-out 1s 2 normal forwards slide;
+}
+
+/* 定义动画关键帧 */
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+
+  33% {
+    transform: translateX(300px) rotate(180deg);
+  }
+
+  66% {
+    transform: translateX(-300px) rotate(-180deg);
+  }
+
+  100% {
+    transform: translateX(0);
+    background-color: rebeccapurple;
+  }
+
+
+}
