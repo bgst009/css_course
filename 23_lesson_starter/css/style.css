@@ -34,12 +34,9 @@ html {
 }
 
 body {
-  align-items: center;
+  min-height: 100vh;
   display: flex;
   flex-flow: column nowrap;
-  gap: 1rem;
-  justify-content: center;
-  min-height: 100vh;
 }
 
 /* || BLOCKS */
@@ -49,4 +46,42 @@ body {
   min-width: 100px;
   min-height: 100px;
   border-radius: 15px;
+}
+
+.header {
+  background-color: var(--HEADER-BGCOLOR);
+  color: var(--HEADER-COLOR);
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem
+}
+
+
+/* || ELEMENTS */
+/* No standalone meaning - semantically tied to the block */
+/* Does not represent structure, NOT header__nav__btn */
+
+.header__btn {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 1rem;
+}
+
+/* || MODIFIERS */
+/* incremental style changes */
+
+/* Blocks with modifiers */
+
+.header__btn--lean {
+  transform: skew(-10deg);
+}
+
+.header__btn--secondary {
+  background-color: yellow;
+}
+
+.header__btn--border-lg {
+  border: 0.1rem solid whitesmoke;
 }
